@@ -3,6 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
 import { App } from 'supertest/types';
 import { AppModule } from './../src/app.module';
+import { randomNbr } from './fixture';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication<App>;
@@ -17,9 +18,10 @@ describe('AppController (e2e)', () => {
   });
 
   it('/ (GET)', () => {
+    jest.spyOn(Math, 'random').mockReturnValue(randomNbr);
     return request(app.getHttpServer())
       .get('/')
       .expect(200)
-      .expect('Hello World!');
+      .expect(`Hello World! 22222${randomNbr}`);
   });
 });
