@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "mhutchie.git-graph",
+    "whtouche.vscode-js-console-utils",
+    "esbenp.prettier-vscode",
+    "yatki.vscode-surround",
+    "arjun.swagger-viewer",
+    "meganrogge.template-string-converter",
+    "rangav.vscode-thunder-client"
+  ]
+}
